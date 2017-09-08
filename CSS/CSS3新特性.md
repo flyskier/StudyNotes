@@ -88,16 +88,65 @@ CSS3新特性
 **11、渐变**
 
 
-**背景**
+**12、背景**
 
-**Transition过渡**
+**13、Transition过渡**
 
-**2D变换**
+     transition: property  duration   timing-function   delay;
+     
+          transition-property	 规定设置过渡效果的 CSS 属性的名称。
+          transition-duration	 规定完成过渡效果需要多少秒或毫秒。
+          transition-timing-function	规定速度效果的速度曲线。
+               ease：（逐渐变慢）默认值
+               linear：（匀速）
+               ease-in：(加速)
+               ease-out：（减速）
+               ease-in-out：（先加速后减速）
+               cubic-bezier 贝塞尔曲线（ x1, y1, x2, y2 )
+          transition-delay	定义过渡效果何时开始。
 
-**3d变换**
+* 发生在样式改变的时候
+* 多样式的过渡，用逗号隔开就行
+* [贝塞尔曲线](http://matthewlein.com/ceaser/)
+* IE9,IE9+ 
+* 请始终设置 transition-duration 属性，否则时长为 0，就不会产生过渡效果   
+          
+**过渡完成事件** 
 
-**animation**
+发生transition完成之后  
+问题1 过度完成一次就执行一次   
+
+          Webkit内核： obj.addEventListener('webkitTransitionEnd',function(){},false);
+          firefox:    obj.addEventListener('transitionend',function(){},false);
+
+ 
+**14、transform 2D变换**
+
+     transform:rotate()  skew() scale() translate();
+
+     rotate()  旋转函数 取值度数
+          deg  度数
+          Transform-origin 旋转的基点
+     skew() 倾斜函数 取值度数 
+          skewX()
+          skewY()
+     scale() 缩放函数 取值 正数、负数和小数
+          scaleX()
+          scaleY()
+     translate() 位移函数
+          translateX()
+          translateY()
+
+* Transform 执行顺序问题 — 后写先执行
+* IE10、Firefox、Opera 支持 transform 属性。
+* IE9 支持替代的 -ms-transform 属性（仅适用于 2D 转换）。
+* Safari 和 Chrome 支持替代的 -webkit-transform 属性（3D 和 2D 转换）。
+* Opera 只支持 2D 转换。
 
 
-**参考资料**
-[]()
+**15、3d变换**
+
+**16、animation**
+
+
+
