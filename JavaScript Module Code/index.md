@@ -23,13 +23,13 @@ JavaScript模块化开发
 
 
 
-**[Seajs]()**
+**[Seajs](Seajs.md)**
     
 **参考资料**
 
 [浅谈前端模块化](http://imweb.io/topic/55994b358555272639cb031b)
 
-[seajs- API 快速参考](https://github.com/seajs/seajs/issues/266)
+
 
 
 
