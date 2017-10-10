@@ -21,6 +21,8 @@ Canvas动画是基于程序帧的动画
         
         正割函数  secθ=c/b   ∠A的斜边比邻边
         余割函数  cscθ=c/a   ∠A的斜边比对边
+        
+        
 
 **3.获取鼠标在元素上的坐标**
 
@@ -34,7 +36,11 @@ Canvas动画是基于程序帧的动画
 
     3.es6
 
-**4.Canvas注意事项**
+
+**4Math.atan与Math.atan2**
+
+
+**5.Canvas注意事项**
  
    * Canvas 元素的 width,height 和 style="width: xx;height: xx;" 
    
@@ -53,10 +59,12 @@ Canvas动画是基于程序帧的动画
    * 
 
 
-**5.兼容性**
+**6.兼容性**
 
 
-**6.原理**
+**7.原理**
+
+
 
 **参考资料**
 
