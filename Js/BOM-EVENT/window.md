@@ -43,9 +43,44 @@ BOM——浏览器对象模型(Browser Object Model)
         
         window.location.hash     //url  #后面的内容 包含#
         
-        
+        
+**文档宽高和窗口事件**
 
+ * 可视区的尺寸 clientWidth   clientHeight    
+ 
+          document.documentElement.clientWidth --文档元素的可视区宽度  
+          document.documentElement.clientHeight ---文档元素的可视区高度  
+          
+     
+ 
+ * 滚动距离  scrollTop scrollLeft
+  
+        滚动条滚动距离----scrollTop可视区顶部到到文档顶部的距离
+                     ----scrollLeft 可视区左边到文档左部的距离
+
+        document.documentElement.scrollTop   --IE，火狐 ，Chrome有些版本不能识别
+        document.body.scrollTop              --Chrome
+
+        document.documentElement.scrollLeft
+        document.body.scrollTop.scrollLeft
+
+          document.onclick=function(){
+		//alert(document.documentElement.scrollTop);
+		// alert(document.documentElement.scrollLeft);
+		 alert(document.body.scrollTop);
+		 alert(document.body.scrollLeft);  
+             var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+	      }
+
+* 内容高 scrollHeight
+
+        document.body.scrollHeight
+        
+* 文档高      offsetHeight
+       
          
-         
-        
-        
+  
+  **参考资料**
+  
+  [WebAPI接口-Element](https://developer.mozilla.org/zh-CN/docs/Web/API/Element)
+     
