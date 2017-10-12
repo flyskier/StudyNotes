@@ -44,13 +44,16 @@ BOM——浏览器对象模型(Browser Object Model)
         window.location.hash     //url  #后面的内容 包含#
         
         
-**文档宽高和窗口事件**
+**文档宽高**
 
- * 可视区的尺寸 clientWidth   clientHeight    
- 
+ * 可视区的尺寸 clientWidth   clientHeight      
+   
+   	  包含内边距，但不包括水平滚动条、边框和外边距
+	 
           document.documentElement.clientWidth --文档元素的可视区宽度  
-          document.documentElement.clientHeight ---文档元素的可视区高度  
-          
+          document.documentElement.clientHeight ---文档元素的可视区高度 
+	  
+          clientHeight 可以通过 CSS height + CSS padding - 水平滚动条高度 (如果存在)来计算.
      
  
  * 滚动距离  scrollTop scrollLeft
@@ -76,11 +79,27 @@ BOM——浏览器对象模型(Browser Object Model)
 
         document.body.scrollHeight
         
-* 文档高      offsetHeight
+* 文档高    offsetHeight
        
-         
+ 
+**窗口事件**
+
+* onsroll:当滚动条滚动的时候触发-----按时间来计算触发次数
+   
+	   window.onscroll = function (e) {
+	    // 当页面的滚动条滚动时,会执行这里的代码
+	   }
+   
+* onresize 在窗口大小改变之后,就会触发resize事件.---按时间来计算触发次数
+
+	  window.onresize= function (e) {
+	    // 当窗口大小发生改变的时候,会执行这里的代码
+	   }
+ 
   
   **参考资料**
+  
+  [WebAPI接口-WindWindow](https://developer.mozilla.org/zh-CN/docs/Web/API/Window)
   
   [WebAPI接口-Element](https://developer.mozilla.org/zh-CN/docs/Web/API/Element)
      
