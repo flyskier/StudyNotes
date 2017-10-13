@@ -85,7 +85,22 @@ DOM事件流
 
 * 2.Jq阻止事件冒泡
 
-
+    jQuery.Event提供了一个非常简单的方法来阻止事件冒泡：event.stopPropagation();
+    
+        $("p").click(function(event){
+             event.stopPropagation();
+             // do something
+        })
+        
+   但是这个方法对使用live绑定的事件没有作用，需要一个更简单的方法阻止事件冒泡：return false;
+       
+       $("#div1").mousedown(function(event){
+            return false;
+        });
+  区别:
+  
+        return false 不仅阻止了事件往上冒泡，而且阻止了事件本身。
+        event.stopPropagation() 则只阻止事件往上冒泡，不阻止事件本身。
 
 
 
