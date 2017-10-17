@@ -11,9 +11,7 @@ DOM事件流
 
 
 
-**事件捕获**
-
-    从根节点到目标元素
+**事件函数的绑定**
 
 给一个对象绑定一个事件处理函数的几种方法
 
@@ -40,8 +38,8 @@ DOM事件流
                     3.事件函数的执行的顺序正序
                     4.事件函数里的this 指向触发该事件的对象
                     
-                     document.attachEVent('click',fn1，false);  
-                     document.attachEVent('click',fn2，false);
+                     document.addEventListener('click',fn1，false);  
+                     document.addEventListener('click',fn2，false);
                    
        兼容问题解决方案：
        
@@ -50,18 +48,40 @@ DOM事件流
                   call方法的第一个参数可以改变函数执行过程中内部this的指向
                   call方法的第二个参数开始就是原来函数的列表
                   
-       
-                  
-                  
-    
+                  function bind(obj, evname, fn) {
+                    if (obj.addEventListener) {
+                        obj.addEventListener(evname, fn, false);
+                    } else {
+                        obj.attachEvent('on' + evname, function() {
+                            fn.call(obj);
+                        });
+                    }
+                }
 
+                bind(document, 'click', fn1);
+                bind(document, 'click', fn2);
+
+**事件函数的取消**
+
+* 1.赋值形式的取消
+  
+        obj.onclick=null;//取消
+        
+* 2.给一个对象的同一个事件取消多个不同的函数
+
+
+        IE：obj.dettachEvent(事件名称，事件函数)
+        标准：obj.removeEventListener(事件名称,事件函数,是否捕获) 默认是false  false：冒泡 true 捕获
+ 
+
+
+**事件捕获**
+
+    从根节点到目标元素       
 
 **事件冒泡**
 
     从目标元素到根节点，当一个元素接收到事件的时候，会把他接收到的所有事件传播给他的父级，一直到window
-
-
-
 
 
 
