@@ -1,0 +1,93 @@
+第三章
+=====
+
+* **语法**:区分大小写（变量，函数名，操作符）
+
+* **标识符**：指变量，函数，属性的名字，或函数的参数
+
+* **关键字**：可用于表示控制语句的开始和结束，或用于执行特定操作  
+
+        var  break  do  return  if  while 
+        
+ * **保留字**：还未被使用，但未来可能被用作关键字    
+ 
+        int  float  public class private
+        
+   
+
+**书写规则** ： 
+
+  * 第一个字符必须是一个字母，下划线（-），或一个美元符号   
+
+  * 其它字符可以是字母，数字，下划线或美元符号
+
+  * ECMAScript标识符采用驼峰大小写格式，因此最佳书写方式推荐驼峰
+
+  * 不能把关键字，保留字，true ,false ,null作为标识符 （使用关键字作为标识符会导致‘Identifier Expected’错误，保留字可能导致相同的错误，取决于特定引擎）
+  
+  * 省略分号（;）,{}的写法不推荐 ---避免错误，提高性能
+  
+  
+ **变量**
+ 
+ * 变量是松散类型，可以用来保存任何数据类型
+ 
+ * 未经赋值的的变量，都会保存一个undefined的值
+ 
+ * 省略 var 操作符，变量会变成全局变量
+ 
+ * 声明和赋值可以采取,逗号间隔的形式 
+ 
+        var a,b,c;
+        var a=1,
+            b=2,
+            c=3;
+  
+ **typeof**
+ * typeof 是操作符不是函数，可以加()使用，也可以不加（）使用，返回字符串  
+ 
+        ‘number’        ---如果指是数值
+        ‘boolean’       ---如果值是布尔
+        ‘string’        ---如果值是字符串
+        ‘object’        ---如果只是对象或Null
+        ‘undefined’     ---如果值是未定义
+        ‘function’      ---如果值是个函数
+ 
+ **数据类型**
+ 
+ * 5种简单数据类型（基本数据类型）
+        
+        Number
+        String
+        Boolean
+        Null
+        Undefined
+ * 1种复杂类型
+ 
+        Object
+        
+        
+* 1、undefined类型 
+
+        未经初始化的变量，值为undefined
+        未定义或未经初始化的变量typeof值都为‘undefined’
+        function中默认return undefined
+        
+ * 2、Null类型 
+ 
+        undefined==null  --->true
+        undefined===null  --->false
+         
+ * 3、Boolean类型 
+ 
+                        true                 false
+        Boolean         true                 false
+        String       任何非空字符串           空字符串“ ”
+        Number       任何非0数值（包括无穷大）  0和NaN
+        Object       任何对象                  null
+        Undefined     不适用                 undefined
+        
+
+ 
+         
+
