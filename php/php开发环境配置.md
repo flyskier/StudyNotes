@@ -23,7 +23,23 @@ Apache设置多个域名
     启动apache的虚拟主机功能   
     创建项目目录   
     修改httpd-vhosts.conf文件  
+   
+   
+php生产环境安装配置
+====== 
+**服务器环境**
+
+  Linux系统
+    
+* Apache环境配置
+
+* Mysql环境配置
+
+* PHP配置
 
 
+参考资料
+======
 
+[PHP项目部署](http://blog.csdn.net/wangjingna/article/details/50753229)
 
