@@ -21,7 +21,7 @@ JavaScript 应用程序的模块打包器(module bundler)
       
       1、局部安装：
       npm i -D (npm install --save-dev的简写)
-      安装指定版本：npm i -D webpack @version
+      安装指定版本：npm i -D webpack @version        npm i -D webpack @3 
       安装最新版：npm i -D webpack
       安装最新体验版本：npm i -D webpack @beta
 
@@ -39,10 +39,29 @@ webpack.config.js
           output: {
               path: path.resolve(__dirname, 'dist'),
               filename: 'bundle.js'
-          }
+          },
+          mode:'development'
       };
 
  npm init -y  (得到package.json)
+ 
+          {
+              "name": "webpackTest",
+              "version": "1.0.0",
+              "description": "",
+              "main": "webpack.config.js",
+              "scripts": {
+                "test": "echo \"Error: no test specified\" && exit 1",
+                "dev": "webpack"    //webpack --config  my.config.js
+              },
+              "keywords": [],
+              "author": "",
+              "license": "ISC",
+              "devDependencies": {
+                "webpack": "^4.6.0",
+                "webpack-cli": "^2.0.15"
+              }
+            }        
  
  npm i -D webpack (得到node_modules)
  
