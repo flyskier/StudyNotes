@@ -65,7 +65,7 @@ webpack.config.js
  
  npm i -D webpack (得到node_modules)
  
- npm run dev
+ npm run dev (重新打包)
  
 **相关网址**
 
