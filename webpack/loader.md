@@ -1,4 +1,4 @@
-loader
+babel-loader
 ======
 
 loader就是webpack用来预处理模块的，在一个模块被引用前，就预先使用loader处理模块内容
@@ -12,8 +12,6 @@ loader就是webpack用来预处理模块的，在一个模块被引用前，就�
 * 安装预设相关包
 
           npm i -D babel-preset-react
-
-
 
 
 **package.json**
@@ -67,11 +65,17 @@ loader就是webpack用来预处理模块的，在一个模块被引用前，就�
                   use: [{
                       loader: 'babel-loader',
                       options: {
-                          presets: ['react']   //不同预设处理不同语法
+                          presets: ['react','env']   //不同预设处理不同语法
                       }
                   }]
               }]
           }
       };
 
+* babel-loader option 配置提取到.babelrc文件中
+
+
+**相关网址**
+
+[preset-react](http://babeljs.io/docs/plugins/preset-react/)
       
