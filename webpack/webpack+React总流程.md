@@ -22,9 +22,9 @@ webpack打包总流程
 
 **3、新建项目**
 
-        src文件夹（放置项目源代码）
-        dist文件夹（打包后项目文件）
-        新建webpack.config.js(webpack的配置文件)配置入口（src/app.js）和出口(dist)
+      src文件夹（放置项目源代码）
+      dist文件夹（打包后项目文件）
+      新建webpack.config.js(webpack的配置文件)配置入口（src/app.js）和出口(dist)
 
 **4、初始化项目文件（package.json）**
       
