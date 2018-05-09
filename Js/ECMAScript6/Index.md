@@ -269,11 +269,11 @@ ECMAScript6 (ECMAScript2015)
        let a= new QgHuman('eye','close','blue');
        a.log(a.x,a.y);        //blue eye close
        
-       //变量接受类的方法时
-       let c=a.log;
+       //变量接受类的方法时
+       let c=a.log;
        c(a.x,a.y);// Cannot read property 'name' of undefined
-      
-       修正方法在 QgHuman的构造函数中添加 this.log=this.log.bind(this);
+
+       修正方法在 QgHuman的构造函数中添加 this.log=this.log.bind(this);
 
 
 
