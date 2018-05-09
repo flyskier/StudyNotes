@@ -1,8 +1,15 @@
 babel和babel-loader
 =====
 
-
 babel是Js编译器能将ES6语法编译成Es5,babel的运行是基于插件的，没有插件babel将一无是处
+
+babel-core
+
+plugins
+
+presets
+
+.babelrc
 
 * 1.安装babel-cli
       
