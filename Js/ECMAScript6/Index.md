@@ -75,7 +75,7 @@ ECMAScript6 (ECMAScript2015)
        log('1', '3');//1 3
        log('1', '') ; //1 
        
-*   参数变量是默认声明的，不能用let或const再次声明
+* 参数变量是默认声明的，不能用let或const再次声明
 
         function foo(x = 5) {
          let x = 1; // error
@@ -83,6 +83,22 @@ ECMAScript6 (ECMAScript2015)
         }
        
 * 箭头函数
+
+
+
+**模板字符串**
+
+
+**解构赋值**
+
+
+**spread-rest**
+
+
+**类**
+
+
+
 
 
 
