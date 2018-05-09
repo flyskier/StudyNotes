@@ -90,6 +90,7 @@ ECMAScript6 (ECMAScript2015)
        
 
 
+
 **模板字符串（template string）**
 
 * 声明模板字符串用反引号
@@ -111,9 +112,30 @@ ECMAScript6 (ECMAScript2015)
        `Hello ${name}, how are you ${time}?`
 
 
+
 **解构赋值**
 
+* 数组解构
+   
+* 对象解构
+   
+       对象的解构赋值的内部机制，是先找到同名属性，然后再赋给对应的变量。真正被赋值的是后者，而不是前者。
 
+       let { foo: baz } = { foo: "aaa", bar: "bbb" };
+       baz // "aaa"
+       foo // error: foo is not defined
+       foo是匹配的模式，baz才是变量。真正被赋值的是变量baz，而不是模式foo
+       
+ * 嵌套的解构
+       
+ * 在函数参数里面直接结构
+ 
+       function log({fristName,lastName},n){
+              console.log(`${fristName}  ${lastName} ${n}`)
+       }
+       log({fristName:'ss',lastName:'ll'},88);
+       
+       
 **spread-rest**
 
 
