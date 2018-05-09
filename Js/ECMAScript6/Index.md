@@ -136,7 +136,45 @@ ECMAScript6 (ECMAScript2015)
        log({fristName:'ss',lastName:'ll'},88);
        
        
-**spread-rest**
+**spread(展开)**
+
+* 扩展运算符（spread）是三个点（`...`）
+
+* 在函数参数里面展开一个数组
+
+      function fn(a,b,c){
+           console.log(a,b,c);
+       }
+       let arr=[1,2,3];
+
+       fn(arr);        // [1, 2, 3] undefined undefined
+       fn(...arr);     //1 2 3
+       fn(...[1,2,3]); //1 2 3
+
+* 在一个数组里面展开另外一个数组
+       
+       let arr=[1,2,3];
+       console.log(['a','b',...arr,'c']); //["a", "b", 1, 2, 3, "c"]
+
+* 展开对象
+
+       let obj={ a:1,b:2};
+       console.log(
+       {
+           a:20,
+           name:'test',
+           ...obj
+        });  // {a: 1, name: "test", b: 2}
+
+       console.log(
+       {
+           a:20,
+           name:'test',
+           ...obj,
+           a:88
+       });  //{a: 88, name: "test", b: 2}
+       
+**rest(剩余)**
 
 
 **类**
