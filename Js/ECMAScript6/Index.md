@@ -176,13 +176,104 @@ ECMAScript6 (ECMAScript2015)
        
 **rest(剩余)**
 
+* 运算符也是是三个点（`...`）
 
-**类**
+* 在函数形参里面使用rest
+       
+       function fn(a,b,...c){
+              console.log(a,b,c);
+       }
+       fn(1,2,3,4,5);//1 2 [3, 4, 5]
+       
+* 在解构对象中使用rest
 
+       let obj ={a:1,b:2,c:3,d:4};
+       let {a,c,...f}=obj;
+       console.log(a,c,f);//1 3 {b: 2, d: 4}
 
+**类和类的继承**
 
+* 类的声明
 
+       class 类名{  
+              //构造函数，初始化一个对象的属性
+              constructor(){
+                   //属性
+              }
+             方法名(){ }
+       }
+       
+       class Human {
+            constructor(){
+               this.x='hello';
+               this.y='world';
+            }
+            log(c,y){
+               console.log('xx',c,y);
+            }
+            test(){
+               console.log('I can sing');
+            }
+       }
+       let a =new Human();
 
+       a.log('test','class');//xx test class
+       a.log(a.x,a.y);        //xx hello world
+       a.test();               //I can sing
+       
+* 类的继承
+
+       class Human {
+           constructor(x,y){
+               this.x=x;
+               this.y=y;
+           }
+           log(c,y){
+               console.log('Human',c,y);
+           }
+       }
+       class QgHuman extends Human{
+           constructor(x, y, color) {
+               super(x, y); // 调用父类的constructor(x, y)
+               this.color = color;
+           }
+           log(c,y){
+               console.log('QgHuman',c,y);
+           }
+
+       }
+       let a= new QgHuman('eye','close','blue');
+       a.log(a.x,a.y);        //QgHuman eye close
+       
+* 类的this指向问题
+
+       class Human {
+           constructor(x,y){
+               this.x=x;
+               this.y=y;
+           }
+           log(c,y){
+               console.log('Human',c,y);
+           }
+       }
+       class QgHuman extends Human{
+           constructor(x, y, name) {
+               super(x, y); // 调用父类的constructor(x, y)
+               this.name= name;
+           }
+           log(c,y){
+               console.log(`${ this.name}`,c,y);
+           }
+
+       }
+       let a= new QgHuman('eye','close','blue');
+       a.log(a.x,a.y);        //blue eye close
+       
+       //变量接受类的方法时
+       let c=a.log;
+       c(a.x,a.y);// Cannot read property 'name' of undefined
+      
+       修正方法在 QgHuman的构造函数中添加 this.log=this.log.bind(this);
 
 
 
