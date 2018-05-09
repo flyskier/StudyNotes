@@ -23,4 +23,7 @@ faceBook的一个开源项目，Instagram(ins)就使用了react
 * 事件
 * 生命周期
 
-   
+**环境准备** 
+
+* 安装node.js
+
