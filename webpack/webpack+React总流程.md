@@ -24,7 +24,7 @@ webpack打包总流程
 
         src文件夹（放置项目源代码）
         dist文件夹（打包后项目文件）
-        webpack.config.js(webpack的配置文件)配置入口（src/app.js）和出口(dist)
+        新建webpack.config.js(webpack的配置文件)配置入口（src/app.js）和出口(dist)
 
 **4、初始化项目文件（package.json）**
       
@@ -63,6 +63,54 @@ webpack打包总流程
             }
        
        2.npm run dev(执行过程中会先安装webpack-cli)
+       
+
+**7、安装依赖**
+      
+  * 1、生产依赖 react react-dom
+            
+            npm i -s react react-dom
+            
+  * 2、开发依赖
+  
+            npm i -D babel-loader babel-core   
+            
+            npm i -D babel-preset-react
+            
+            npm i -D babel-preset-env 
+            
+            省时的浏览器同步测试工具
+            Browsersync能让浏览器实时、快速响应您的文件更改（html、js、css、sass、less等）并自动刷新页面
+            npm i -D  browser-sync
+            
+            处理css
+            npm i -D css-loader
+            npm i -D style-loader
+            
+            处理img
+            npm i -D file-loader
+            npm i -D url-loader
+
+            express
+            
+            webpack 开发服务器 devserver
+            npm i -D webpack-dev-server
+            
+            //根据html模板生成html文件
+            npm i -D html-webpack-plugin
+           
+            react-hot-loader
+            
+            
+            webpack-hot-middleware
+            
+            
+            webpack-dev-middleware
+            
+            
+            
+           
+**8、配置webpack的配置文件**
 
 
 
@@ -80,8 +128,14 @@ webpack打包总流程
 
 [nodejs下载安装](https://nodejs.org/en/download/)
 
+[npm官网](https://www.npmjs.com/)
+
 [webstorm官网](http://www.jetbrains.com/webstorm/)
 
 [webstorm激活破解方法](https://blog.csdn.net/voke_/article/details/76418116)
 
 [webstorm中文文档](https://doc.webpack-china.org/concepts/)
+
+[babel官网](http://babeljs.io/)
+
+[browsersync](http://www.browsersync.cn/)
