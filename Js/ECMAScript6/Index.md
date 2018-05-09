@@ -31,10 +31,10 @@ ECMAScript6 (ECMAScript2015)
        console.log(a);
        Uncaught TypeError: Assignment to constant variable.
        
-        const a={};
-        a.b=9;
-        console.log(a);
-        --{b: 9}
+       const a={};
+       a.b=9;
+       console.log(a);
+       //{b: 9}
    
 * 只声明不赋值，会报错（声明的时候要初始化）。
      
@@ -63,8 +63,26 @@ ECMAScript6 (ECMAScript2015)
 * 不存在变量提升
 
 
+**函数的扩展**
 
+* 可以给函数的参数指定默认值
 
+       function log(x, y = '2') {
+              console.log(x, y);
+       }
+
+       log('1');//1 2
+       log('1', '3');//1 3
+       log('1', '') ; //1 
+       
+*   参数变量是默认声明的，不能用let或const再次声明
+
+        function foo(x = 5) {
+         let x = 1; // error
+         const x = 2; // error
+        }
+       
+* 箭头函数
 
 
 
