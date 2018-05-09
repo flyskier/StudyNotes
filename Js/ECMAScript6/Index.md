@@ -84,9 +84,31 @@ ECMAScript6 (ECMAScript2015)
        
 * 箭头函数
 
+   1、 箭头函数的注意事项
+
+   2、this的指向会是函数所在的上下文环境
+       
 
 
-**模板字符串**
+**模板字符串（template string）**
+
+* 声明模板字符串用反引号
+
+* 模板字符串中嵌入变量，需要将变量名写在${}之中
+
+* 它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。
+
+       // 普通字符串
+        `hello`; 
+        
+       // 多行字符串
+       `In JavaScript this is
+        not legal.`     
+              
+       // 字符串中嵌入变量
+       let name = "Bob", 
+           time = "today";
+       `Hello ${name}, how are you ${time}?`
 
 
 **解构赋值**
