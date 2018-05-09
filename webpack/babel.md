@@ -1,4 +1,4 @@
-babel和babel-loader
+babel
 =====
 
 babel是Js编译器能将ES6语法编译成Es5,babel的运行是基于插件的，没有插件babel将一无是处
