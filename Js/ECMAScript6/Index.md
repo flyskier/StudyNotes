@@ -26,14 +26,15 @@ ECMAScript6 (ECMAScript2015)
 * const声明一个只读的常量。一旦声明，常量的值就不能再次赋值，是
     对象时可以改变变量的内容 
       
-      const a=9;
+       const a=9;
        a=8;
        console.log(a);
        Uncaught TypeError: Assignment to constant variable.
        
-        const a={};
+        const a={};
         a.b=9;
         console.log(a);
+        --{b: 9}
    
 * 只声明不赋值，会报错（声明的时候要初始化）。
      
