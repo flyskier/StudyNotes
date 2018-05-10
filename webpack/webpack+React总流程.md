@@ -25,8 +25,8 @@ webpack打包总流程
       src文件夹（放置项目源代码）
       dist文件夹（打包后项目文件）
       新建webpack.config.js(webpack的配置文件)配置入口（src/app.js）和出口(dist)
-      src/common（放置公共资源）
-      src/index.html（初始化html代码）
+      src/common（放置公共资源）
+      src/index.html（初始化html代码）
 
 **4、初始化项目文件（package.json）**
       
@@ -69,11 +69,11 @@ webpack打包总流程
 
 **7、安装依赖**
       
-  * 1、生产依赖 react react-dom
+* 1、生产依赖 react react-dom
             
             npm i -s react react-dom
             
-  * 2、开发依赖
+* 2、开发依赖
   
             npm i -D babel-loader babel-core   
 
