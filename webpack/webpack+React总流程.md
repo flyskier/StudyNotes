@@ -27,6 +27,7 @@ webpack打包总流程
       新建webpack.config.js(webpack的配置文件)配置入口（src/app.js）和出口(dist)
       src/common（放置公共资源）
       src/index.html（初始化html代码）
+      src/Component (放组件)
 
 **4、初始化项目文件（package.json）**
       
@@ -133,6 +134,7 @@ webpack打包总流程
           "browser-sync": "^2.24.4",
           "express": "^4.16.3",
           "html-webpack-plugin": "^3.2.0",
+          "style-loader": "^0.16.1",
           "react-hot-loader": "^4.1.3",
           "webpack": "^4.8.1",
           "webpack-cli": "^2.1.3",
