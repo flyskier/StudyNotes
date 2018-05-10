@@ -82,24 +82,24 @@ webpack打包总流程
             省时的浏览器同步测试工具
             Browsersync能让浏览器实时、快速响应您的文件更改（html、js、css、sass、less等）并自动刷新页面
             npm i -D  browser-sync
-            
-            处理css
+
+            处理css
             npm i -D css-loader
             npm i -D style-loader
-            
-            处理img
+
+            处理img
             npm i -D file-loader
             npm i -D url-loader
 
-            express
-            
+            express
+
             webpack 开发服务器 devserver
             npm i -D webpack-dev-server
-            
-            //根据html模板生成html文件
-            npm i -D html-webpack-plugin
+
+            //根据html模板生成html文件
+            npm i -D html-webpack-plugin
            
-            react-hot-loader
+            react-hot-loader
             
             
             webpack-hot-middleware
