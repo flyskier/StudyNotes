@@ -30,6 +30,8 @@ Number类型
             Nuber()
             parseInt()
             parseFloat()
+            String()
+            Boolean()
 
    * **隐式类型转换**
    
