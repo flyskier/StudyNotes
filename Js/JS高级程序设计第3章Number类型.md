@@ -25,11 +25,71 @@ Number类型
  
 **4、数值转换**
  
-   * 显式类型转换（强制类型转换）
+   * **显式类型转换（强制类型转换）**
+
+            Nuber()
+            parseInt()
+            parseFloat()
+
+   * **隐式类型转换**
    
+ 1、(+)变成字符串  
    
+      var a=200+'3';
+      var b='3'+200;
+      console.log(a);  //2003
+      console.log(b);  //3200
+      
+ 2、(- * / %)变成数字
    
+      var a=200-'3';
+      var b='300'-200;
+      console.log(a);   //197
+      console.log(b)   //100  
    
-   * 隐式类型转换
-   
-   
+3、(++ --)变成数字
+ 
+      var a='200';
+      a++;
+      console.log(a); //201
+        
+ 4、(> <)
+      
+      console.log('10'>9); //true
+      console.log('1000'>'9'); //false
+      数字的比较和字符串的比较是不同的
+      数字的比较是数值的比较
+      字符串的比较是一位一位的比较
+      
+ 5、!（取反）
+  
+      把！右边的数据类型转换成布尔值
+      console.log(!'');           //true
+      console.log(!null);         //true
+      console.log(!0);           //true
+      console.log(!NaN);         //true
+      console.log(!undefined);   //true
+      console.log(!false);       //true
+      
+ 6、==
+
+
+* **数组转换注意点**
+
+1、多个数字和数字字符串混合运算时，跟操作数的位置有关
+      
+      var a= 1+20+'31'; 
+      console.log(a); //2131
+
+      var a= '31'+1+20;
+      console.log(a); //31120
+      
+ 2、数字字符串之前存在正负号（+-）时会被转换成数字
+ 
+      console.log(typeof +'3');//number
+      var a=+'3'+4;
+      console.log(a); //7   
+      
+      console.log(typeof -'3');//number
+      var a=-'3'+4;
+      console.log(a); //1
