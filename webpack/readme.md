@@ -3,7 +3,8 @@ webpack
 JavaScript 应用程序的模块打包器(module bundler)
 
 **作用**
-
+前端的模块管理器（package management）
+管理各种JavaScript脚本的依赖关系，自动加载各个模块，使得网页结构清晰合理
 
 
 **相关知识点**
