@@ -57,7 +57,7 @@ vue
               new Vue({
                   el: '#app', // element 可以写css选择器 node(元素节点)
                   data:{  // 数据对象
-                     message
+                     message   //message: message
                   }
               })
           </script>
