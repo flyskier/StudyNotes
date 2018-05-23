@@ -56,7 +56,7 @@ vue
               // 传入一个对象作为参数，称之为选项对象，告诉vue做什么事情
               new Vue({
                   el: '#app', // element 可以写css选择器 node(元素节点)
-                  data:{  // 数据对象
+                  data:{  // 数据对象 上的属性都会放在实例上
                      message   //message: message
                   }
               })
@@ -75,7 +75,7 @@ vue
                 var app = document.getElementById('app');
                 new Vue({
                     el: app, // element 可以写css选择器 node(元素节点)
-                    data:{  // 数据对象
+                    data:{  // 数据对象 上的属性都会放在实例上
                         msg:message
                     }
                 })
