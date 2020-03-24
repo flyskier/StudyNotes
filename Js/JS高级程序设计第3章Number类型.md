@@ -10,14 +10,27 @@ Number类型
 * 进行算术计算的时候，八进制和16进制表示的数值最终将转换成10进制数值 
 
       例如   var a=070      -->56  =0*8的0次方+7*8的1次方
-             var b= 0xaA    -->10  A-F代表10-15
+             var b= 0xA    -->10  A-F代表10-15
              var c= a+b;    -->66
              
 **1、数值的范围**
- 
- 
+
+      无穷大 Infinity,Infinity不是能够参入计算的数值 
+      isFinity()函数判断某个数值是否位于最小值和最大值之间，是的话返回 true
+      
+      Number.MIN_VALUE   最小数值 5e-324
+      Number.MAX_VALUE   最小数值 1.79...e+308
  
 **2、NaN-非数值（Not a Number）**
+
+     一个特殊的数值 表示一个本来要返回数值的操作数未返回数值的情况（这样久不会抛出错误）
+     
+     任何涉及NaN的操作都会返回NaN
+     NaN与任何值都不相等，包括NaN本身
+            NaN==NaN false
+     出现NaN意味着进行非法的运算
+     
+     isNaN()函数内部根据Number()来转换，不能被转换成数值的返回true
  
  
 **3、浮点数的计算问题**
@@ -27,9 +40,9 @@ Number类型
  
    * **显式类型转换（强制类型转换）**
 
-            Nuber()
-            parseInt()
-            parseFloat()
+            Nuber()    用于任何数据类型
+            parseInt() 用于把字符串转换成数值
+            parseFloat() 用于把字符串转换成数值
             String()
             Boolean()
 
@@ -74,9 +87,11 @@ Number类型
       console.log(!false);       //true
       
  6、==
+ 
 
 
-* **数组转换注意点**
+
+* **数值转换注意点**
 
 1、多个数字和数字字符串混合运算时，跟操作数的位置有关
       
