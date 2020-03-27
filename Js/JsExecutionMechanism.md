@@ -56,6 +56,8 @@ JavaScript语言的一大特点就是单线程
 ### 参考资料
 
  [阮一峰的JavaScript 运行机制详解：再谈Event Loop](http://www.ruanyifeng.com/blog/2014/10/event-loop.html)
+ 
+ [js执行机制](https://www.jianshu.com/p/1368d375aa66)
     
     
 
