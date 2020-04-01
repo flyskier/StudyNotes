@@ -52,6 +52,16 @@ JavaScript语言的一大特点就是单线程
  主线程运行的时候，产生堆（heap）和栈（stack），栈中的代码调用各种外部API，它们在"任务队列"中加入各种事件   
 (click，load，done).只要栈中的代码执行完毕，主线程就会去读取"任务队列"，依次执行那些事件所对应的回调函数
 
+任务队列有两种，⼀种是 Macrotask(宏任务)，另外⼀种是 Microtask（微任务），Microtask 优先级是⾼于Macrotask 的。
+
+Microtask 当中的任务也是在执⾏栈当中的任务执⾏完成后再进⾏执⾏，执⾏的时候和Macrotask 有⼀些区别，Microtask 当中任务不会⼀个⼀个压⼊执⾏栈，⽽是所有任务直接压⼊栈中，当 Microtask 当中的任务执⾏完毕后，然后我们再从 Macrotask 中取栈顶的第⼀个任务进⾏执⾏。
+
+Macrotask：setTimeout、setInterval、I/O、UI Rendering、script当中的所有代码、setImmediate(Node) 
+
+Microtask：process.nextTick(node) 、Promise 、MutationObserver
+
+Microtask 当中各种任务的优先级，具体的优先级如下：process.nextTick > Promise > MutationOberser
+
     
 ### 参考资料
 
