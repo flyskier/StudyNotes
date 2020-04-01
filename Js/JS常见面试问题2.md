@@ -61,4 +61,4 @@
 
 **5.事件循环(event Loop)**
 
-  [Js执行机制](./Js/JsExecutionMechanism.md)
+  [Js执行机制](./JsExecutionMechanism.md)
