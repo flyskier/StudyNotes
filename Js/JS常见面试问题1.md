@@ -3,7 +3,7 @@
 
 **1.什么闭包,闭包有什么用，闭包的缺点**
 
-* 指有权访问另一个函数作用域中的变量的函数（闭包是在某个作用域内定义的函数，它可以访问这个作用域内的所有变量）。
+* 指有权访问另一个函数作用域中的变量的函数（内部函数总是可以访问其所在的外部函数中声明的参数和变量，即使在其外部函数被返回（寿命终结）了之后）
 
 * 函数被调用时
 
@@ -20,11 +20,26 @@
 
 * 闭包常见用途：
       
-      使用闭包可以在js中模仿块级作用域
-      在对象中创建私有变量
+      1.使用闭包可以在js中模仿块级作用域
       
-      创建特权方法用于访问控制
-      事件处理程序及回调
+      2.在对象中创建私有变量、特权变量、储存变量等
+      私有变量的实现⽅法很多，有靠约定的（变量名前加_）,有靠Proxy代理的，也有靠Symbol这 种新数据类型的 
+      但是真正⼴泛流⾏的其实是使⽤闭包
+      function Person(){ 
+            var name = 'cxk'; 
+            this.getName = function(){ 
+                  return name; 
+            }
+            this.setName = function(value){
+                  name = value; 
+            } 
+      }
+      const cxk = new Person() 
+      console.log(cxk.getName()) //cxk 
+      cxk.setName('jntm') 
+      console.log(cxk.getName()) //jntm 
+      console.log(name) //name is not defined
+      
       
 * 闭包的缺点
     
